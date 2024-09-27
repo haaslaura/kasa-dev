@@ -1,8 +1,15 @@
+import logo from '../../assets/logo-footer.svg'
+
 function Footer() {
+
+    const date = new Date();
+    const currentYear = date.getFullYear()
+
     return (
-        <div>
-            <h2>C'est le footer</h2>
-        </div>
+        <footer>
+            <img className="footer__logo" src={logo} alt="" />
+            <p>©{currentYear} Kasa. All rights reserved</p>
+        </footer>
     );
 }
 
