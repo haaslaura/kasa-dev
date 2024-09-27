@@ -3,9 +3,12 @@
 Développez une application Web avec React et React Router
 
 ## Utilisation
-Ce repository contient la version back-end et la version front-end du projet. Chaque dossier contient un fichier Readme correspondant, avec toutes les informations.
+Ce repository contient la version front-end du projet.
+
 Pour lancer le projet en dev mode : `yarn start`
+
 Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans votre navigateur.
+
 La page se rechargera lorsque vous effectuerez des modifications. Vous pourrez également voir les erreurs dans la console.
 
 ## Scénario
@@ -21,4 +24,6 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 
 ## 🛠 Outils
 - React
+- Create React App
+- React Router
 - Saas
