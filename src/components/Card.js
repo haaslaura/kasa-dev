@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 
 function Card({ title, cover }) {
     return (
-        <div>
+        <div className="homecard">
+            {/* ajouter un lien !! */}
             <p>{title}</p>
             <img src={cover} alt="" />
+
         </div>
     );
 }

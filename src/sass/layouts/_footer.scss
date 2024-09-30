@@ -1,0 +1,28 @@
+footer {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .footer__logo {
+        margin-bottom: 1rem;
+        max-width: 122px;
+    }
+
+    p {
+        color: $color-font-light;
+        max-width: 35vw;
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: $font-weight-semibold;
+    }
+
+    @media screen and (min-width: 576px) {
+        p {
+            font-size: 1.5rem;
+            max-width: 90vw;
+        }
+    }
+}

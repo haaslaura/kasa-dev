@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    border: 1px red solid;
+
+    img {
+        max-width: 145px;
+    }
+
+    .navbar__link {
+        margin-left: 1.5rem;
+        font-size: 0.75rem;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        color: $color-font-dark;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and (min-width: 576px) {
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

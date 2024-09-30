@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*******************/
+/*** MAIN COLOR ****/
+/*******************/
+* {
+  margin: 0;
+}
+
+/*******************/
+/**** MAIN FONT ****/
+/*******************/
+.homecard {
+  max-width: 100px;
+}
+.homecard img {
+  width: 100px;
+}
+
+.herosection img {
+  width: 100px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px red solid;
+}
+header img {
+  max-width: 145px;
+}
+header .navbar__link {
+  margin-left: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+header .navbar__link:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 576px) {
+  header {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+footer .footer__logo {
+  margin-bottom: 1rem;
+  max-width: 122px;
+}
+footer p {
+  color: #fff;
+  max-width: 35vw;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 576px) {
+  footer p {
+    font-size: 1.5rem;
+    max-width: 90vw;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*
+Breakpoint	Class infix	Dimensions
+X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+*/
+
+/*# sourceMappingURL=style.css.map */

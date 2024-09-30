@@ -1,25 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './pages/Home/index'
-import About from './pages/About/index'
-import Header from './components/Header/index'
-import Footer from './components/Footer/index'
-import Error from './components/Error/index'
+import "./assets/style.css"
 
+import Layout from "./layouts/Layout"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import HousingSheet from "./pages/Housing";
+import Error from "./pages/Error404";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/a-propos" element={<About />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/housing/:param" element={<HousingSheet />} />
+          <Route path="*" element={<Error />} />
+        </Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

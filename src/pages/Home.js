@@ -1,7 +1,6 @@
-import Hero from "../../components/Hero/homehero";
-import Card from "../../components/Card";
-
-import logements from "../../data/logements.json"
+import Hero from "../components/Hero";
+import Card from "../components/Card";
+import logements from "../data/logements.json"
 
 function Home() {
 
@@ -14,6 +13,7 @@ function Home() {
                         key={logement.id}
                         title={logement.title}
                         cover={logement.cover}
+                    // link={}
                     />
                 ))}
             </div>
