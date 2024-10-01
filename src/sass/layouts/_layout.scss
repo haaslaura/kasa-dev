@@ -1,18 +1,23 @@
-main {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.mainlayout {
+    width: 100%;
 
-    @media screen and (min-width: 576px) {
-        // max-width: 1240px;
-        // margin-left: auto;
-        // margin-right: auto;
-        // padding: 0;
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @media screen and (min-width: 576px) {
+            // max-width: 1240px;
+            // margin-left: auto;
+            // margin-right: auto;
+            // padding: 0;
+        }
+
+        @media screen and (min-width: 992px) {
+            max-width: 1240px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
     }
 
-    @media screen and (min-width: 992px) {
-        max-width: 1240px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-    }
 }

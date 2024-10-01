@@ -5,15 +5,15 @@ import logements from "../data/logements.json"
 function Home() {
 
     return (
-        <div>
+        <div className="home-container">
             <Hero />
-            <div>
+            <div className="home-container__housing">
                 {logements.map((logement) => (
                     <Card
                         key={logement.id}
+                        id={logement.id}
                         title={logement.title}
                         cover={logement.cover}
-                    // link={}
                     />
                 ))}
             </div>

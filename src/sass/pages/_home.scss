@@ -1,0 +1,22 @@
+.home-container__housing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+
+    @media screen and (min-width: 576px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3.13rem;
+
+        background-color: #F6F6F6;
+        border-radius: 20px;
+        padding: 3rem;
+    }
+}

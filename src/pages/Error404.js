@@ -3,7 +3,7 @@ import Home from '../pages/Home';
 
 function Error() {
     return (
-        <div>
+        <div className="error-container">
             <h1>404</h1>
             <h2>Oups! La page que vous avez demandez n'existe pas</h2>
             <Link to="/" element={<Home />}>Retourner sur la page d'accueil</Link>
