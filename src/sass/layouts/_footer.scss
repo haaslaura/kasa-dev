@@ -5,6 +5,7 @@ footer {
     align-items: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    width: 100vw;
 
     .footer__logo {
         margin-bottom: 1rem;
@@ -21,8 +22,14 @@ footer {
 
     @media screen and (min-width: 576px) {
         p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             max-width: 90vw;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        p {
+            font-size: 1.5rem;
         }
     }
 }
