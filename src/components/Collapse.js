@@ -12,6 +12,8 @@ function Collapse({ title, content }) {
     // if (contentRef.current) console.log(contentRef.current.scrollHeight);
     // utiliser useRef pour mesurer dynamiquement la hauteur du contenu
 
+    // test branch animation collapse
+
     return (
         <div className="collapse">
             <button
