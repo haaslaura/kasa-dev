@@ -122,7 +122,7 @@
   font-size: 0.9rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  line-height: 18.54px;
+  line-height: 1.6rem;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -131,27 +131,32 @@
 .collapse button img {
   width: 24px;
 }
-.collapse .collapse__content-parent {
-  height: 0px;
+.collapse .collapse__parent {
   overflow: hidden;
-  transition: height ease 0.9s;
+  transition: height 0.3s ease;
 }
-.collapse .collapse__content-parent .collapse__content {
+.collapse .collapse__parent .collapse__content {
   padding: 25px 15px;
   border-radius: 5px;
   background-color: rgba(246, 246, 246, 0.4509803922);
+  transform: translateY(-110px);
+  transition: transform 0.3s ease;
 }
-.collapse .collapse__content-parent .collapse__content p {
+.collapse .collapse__parent .collapse__content p {
+  display: block;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.06rem;
+}
+.collapse .collapse__parent .open-content {
+  transform: translateY(0);
 }
 @media screen and (min-width: 576px) {
   .collapse button {
     padding: 10px 20px 10px 15px;
     font-size: 1.1rem;
   }
-  .collapse .collapse__panel p {
+  .collapse .collapse__parent .collapse__content p {
     font-size: 1.12rem;
     font-weight: 400;
     line-height: 1.6rem;

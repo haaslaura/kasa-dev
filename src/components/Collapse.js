@@ -5,34 +5,40 @@ import closeIcon from "../assets/collapse-icon-close.svg"
 
 function Collapse({ title, content }) {
 
-    const [openCollapse, setopenCollapse] = useState(false);
+    const [openCollapse, setOpenCollapse] = useState(false);
     const ariaControls = useId();
-
     const contentRef = useRef(null);
-    // if (contentRef.current) console.log(contentRef.current.scrollHeight);
-    // utiliser useRef pour mesurer dynamiquement la hauteur du contenu
 
-    // test branch animation collapse
+    const toggleCollapse = () => {
+        setOpenCollapse(!openCollapse);
+    };
 
     return (
         <div className="collapse">
             <button
-                onClick={() => setopenCollapse(!openCollapse)}
+                onClick={toggleCollapse}
                 aria-expanded={openCollapse ? true : false}
                 className="collapse__button"
                 aria-controls={ariaControls}
             >
-                {title}<img src={openCollapse ? openIcon : closeIcon} alt="" />
+                {title}
+                <img src={openCollapse ? openIcon : closeIcon} alt="" />
             </button>
 
-            {openCollapse && (
-                <div
-                    id={ariaControls}
-                    role="region"
-                    className="collapse__content">
+            <div
+                id={ariaControls}
+                role="region"
+                ref={contentRef}
+                className={`collapse__parent ${openCollapse ? 'open-parent' : ''}`}
+                style={{
+                    height: openCollapse ? `${contentRef.current.scrollHeight}px` : '0px',
+                }}
+            >
+                <div className={`collapse__content ${openCollapse ? 'open-content' : ''}`}>
                     <p>{content}</p>
                 </div>
-            )}
+            </div>
+
         </div>
     );
 }

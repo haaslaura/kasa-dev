@@ -11,7 +11,7 @@
         font-size: 0.9rem;
         font-family: $font-main;
         font-weight: $font-weight-bold;
-        line-height: 18.54px;
+        line-height: 1.6rem;
         cursor: pointer;
 
         display: flex;
@@ -21,29 +21,33 @@
         img {
             width: 24px;
         }
-
-        &:active+.collapse__content-parent {
-            // height: 200px;
-        }
     }
 
-    .collapse__content-parent {
-        height: 0px;
+    .collapse__parent {
         overflow: hidden;
-        transition: height ease 0.9s;
+        transition: height 0.3s ease;
+
+
+        .open-parent {}
 
         .collapse__content {
             padding: 25px 15px;
             border-radius: 5px;
             background-color: #F6F6F673;
 
-
+            transform: translateY(-110px);
+            transition: transform 0.3s ease;
 
             p {
+                display: block;
                 font-size: 0.75rem;
                 font-weight: $font-weight-normal;
                 line-height: 1.06rem;
             }
+        }
+
+        .open-content {
+            transform: translateY(0);
         }
 
     }
@@ -54,11 +58,13 @@
             font-size: 1.1rem;
         }
 
-        .collapse__panel {
-            p {
-                font-size: 1.12rem;
-                font-weight: $font-weight-normal;
-                line-height: 1.6rem;
+        .collapse__parent {
+            .collapse__content {
+                p {
+                    font-size: 1.12rem;
+                    font-weight: $font-weight-normal;
+                    line-height: 1.6rem;
+                }
             }
         }
 
