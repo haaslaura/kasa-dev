@@ -6,6 +6,7 @@
 
     .homecard__container {
         position: relative;
+        cursor: pointer;
 
         &::before {
             content: '';

@@ -17,6 +17,7 @@
 }
 .homecard .homecard__container {
   position: relative;
+  cursor: pointer;
 }
 .homecard .homecard__container::before {
   content: "";
@@ -107,6 +108,58 @@
     left: auto;
     font-size: 3rem;
     line-height: 4.25rem;
+  }
+}
+
+.collapse button {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #FF6060;
+  color: #fff;
+  padding: 10px;
+  text-align: start;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 18.54px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.collapse button img {
+  width: 24px;
+}
+.collapse .collapse__content-parent {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 0.9s;
+}
+.collapse .collapse__content-parent .collapse__content {
+  padding: 25px 15px;
+  border-radius: 5px;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+}
+.collapse .collapse__content-parent .collapse__content p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+@media screen and (min-width: 576px) {
+  .collapse button {
+    padding: 10px 20px 10px 15px;
+    font-size: 1.1rem;
+  }
+  .collapse .collapse__panel p {
+    font-size: 1.12rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+  }
+}
+@media screen and (min-width: 576px) and (min-width: 992px) {
+  .collapse button {
+    font-size: 1.5rem;
   }
 }
 
@@ -236,6 +289,42 @@ footer p {
     background-color: #F6F6F6;
     border-radius: 20px;
     padding: 3rem;
+  }
+}
+
+.about-container .about-container__img {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+  width: 100%;
+  height: 111px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.about-container .about-container__accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 576px) {
+  .about-container .about-container__img {
+    height: 180px;
+  }
+  .about-container .about-container__accordion {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-container .about-container__img {
+    height: 223px;
+  }
+  .about-container .about-container__accordion {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

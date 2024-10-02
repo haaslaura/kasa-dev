@@ -1,0 +1,71 @@
+.collapse {
+
+    button {
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        background-color: $color-main;
+        color: $color-font-light;
+        padding: 10px;
+        text-align: start;
+        font-size: 0.9rem;
+        font-family: $font-main;
+        font-weight: $font-weight-bold;
+        line-height: 18.54px;
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            width: 24px;
+        }
+
+        &:active+.collapse__content-parent {
+            // height: 200px;
+        }
+    }
+
+    .collapse__content-parent {
+        height: 0px;
+        overflow: hidden;
+        transition: height ease 0.9s;
+
+        .collapse__content {
+            padding: 25px 15px;
+            border-radius: 5px;
+            background-color: #F6F6F673;
+
+
+
+            p {
+                font-size: 0.75rem;
+                font-weight: $font-weight-normal;
+                line-height: 1.06rem;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 576px) {
+        button {
+            padding: 10px 20px 10px 15px;
+            font-size: 1.1rem;
+        }
+
+        .collapse__panel {
+            p {
+                font-size: 1.12rem;
+                font-weight: $font-weight-normal;
+                line-height: 1.6rem;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            button {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import aboutIllustration from "../assets/about-illustration.jpg"
-import Toggle from "../components/Toggle";
+import Collapse from "../components/Collapse";
 
 export const aboutList = [
     {
@@ -29,11 +29,11 @@ export const aboutList = [
 function About() {
 
     return (
-        <div>
-            <img src={aboutIllustration} alt="Nos valeurs" />
-            <div id="accordionValues" className="accordion">
+        <div className="about-container">
+            <img className="about-container__img" src={aboutIllustration} alt="Nos valeurs" />
+            <div id="accordionValues" className="about-container__accordion">
                 {aboutList.map((element) => (
-                    <Toggle
+                    <Collapse
                         key={element.title}
                         title={element.title}
                         content={element.content}
