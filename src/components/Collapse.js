@@ -44,7 +44,7 @@ function Collapse({ title, content }) {
 }
 
 Collapse.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     content: PropTypes.string.isRequired,
 }
 
