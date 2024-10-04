@@ -13,9 +13,6 @@ function Collapse({ title, content }) {
         setOpenCollapse(!openCollapse);
     };
 
-    console.log(content);
-
-
     return (
         <div className="collapse">
             <button

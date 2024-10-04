@@ -9,19 +9,16 @@ import Error from "./Error404";
 
 function Housing() {
 
-    const { id } = useParams(); // récupère id de l'url
-
-    // Recherche du logement correspondant à l'ID
+    const { id } = useParams();
     const housing = housings.find(house => house.id === id);
 
+    // Handling property id errors
     if (!housing) {
         return <Error
             housingNotFound={housing} />
     }
 
-    console.log(typeof housing.description);
-    console.log(housing.description);
-
+    const numbStars = Number(housing.rating)
 
     return (
         <div className="housing">
@@ -42,8 +39,8 @@ function Housing() {
                     </div>
                 </div>
                 <div>
-                    < StarsRating content={housing.rating} />
-                    < Owner content={housing.host} />
+                    < StarsRating rating={numbStars} />
+                    < Owner host={housing.host} />
                 </div>
             </div>
             <div id="accordionProperties" className="housing__sheet-accordion">
