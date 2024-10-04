@@ -5,10 +5,10 @@ function Card({ id, title, cover }) {
     return (
         <div className="homecard">
             <Link to={`/housing/${id}`}>
-                <div className="homecard__container">
+                <div className="homecard__title">
                     <p>{title}</p>
-                    <img src={cover} alt="" />
                 </div>
+                <img src={cover} alt="" />
             </Link>
         </div>
     );

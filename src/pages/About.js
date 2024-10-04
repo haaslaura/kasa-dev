@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import aboutIllustration from "../assets/about-illustration.jpg"
 import Collapse from "../components/Collapse";
 

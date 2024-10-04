@@ -10,51 +10,68 @@
 /**** MAIN FONT ****/
 /*******************/
 .homecard {
-  border-radius: 10px;
   height: 255px;
+  max-height: 255px;
   width: 100%;
+  border-radius: 10px;
   overflow: hidden;
 }
-.homecard .homecard__container {
+.homecard a {
   position: relative;
-  cursor: pointer;
-}
-.homecard .homecard__container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: block;
   height: 100%;
+}
+.homecard a:active {
+  color: #FF6060;
+}
+.homecard a:hover img {
+  transform: scale(1.09);
+}
+.homecard a .homecard__title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.664) 100%);
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   z-index: 2;
 }
-.homecard .homecard__container p {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  z-index: 3;
-  max-width: 50%;
-  font-size: 1.12rem;
+.homecard a .homecard__title p {
+  margin: 1rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 1.6rem;
-  color: #fff;
+  font-size: 1.12rem;
+  line-height: 1.5rem;
 }
-.homecard .homecard__container img {
-  height: 100%;
-  width: auto;
+.homecard a img {
   object-fit: cover;
-  object-position: 5% 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 255px;
+  border-radius: 10px;
+  transition: transform 500ms ease-in-out;
 }
 @media screen and (min-width: 576px) {
   .homecard {
     height: 300px;
+    max-height: 300px;
+  }
+  .homecard a img {
+    max-height: 300px;
   }
 }
 @media screen and (min-width: 992px) {
   .homecard {
     height: 340px;
+    max-height: 340px;
+  }
+  .homecard a img {
+    max-height: 340px;
   }
 }
 

@@ -13,6 +13,9 @@ function Collapse({ title, content }) {
         setOpenCollapse(!openCollapse);
     };
 
+    console.log(content);
+
+
     return (
         <div className="collapse">
             <button
@@ -38,14 +41,8 @@ function Collapse({ title, content }) {
                     <p>{content}</p>
                 </div>
             </div>
-
         </div>
     );
-}
-
-Collapse.propTypes = {
-    title: PropTypes.string,
-    content: PropTypes.string.isRequired,
 }
 
 export default Collapse;
