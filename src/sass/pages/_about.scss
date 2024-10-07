@@ -18,7 +18,7 @@
         gap: 20px;
     }
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         .about-container__img {
             height: 180px;
         }
@@ -30,7 +30,7 @@
         }
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         .about-container__img {
             height: 223px;
         }

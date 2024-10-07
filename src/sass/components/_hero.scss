@@ -28,7 +28,7 @@
         filter: brightness(50%);
     }
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         height: 180px;
         box-shadow: 0px 4px 4px #00000025;
 
@@ -40,7 +40,7 @@
         }
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         height: 223px;
         display: flex;
         justify-content: center;

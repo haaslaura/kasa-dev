@@ -6,11 +6,11 @@
     font-weight: $font-weight-bold;
     padding: 5px 25px;
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         font-size: 0.75rem;
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         font-size: 0.87rem;
     }
 }

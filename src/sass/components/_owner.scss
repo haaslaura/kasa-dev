@@ -20,7 +20,7 @@
         border-radius: 50%;
     }
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         p {
             font-size: 1rem;
             line-height: 1.4rem;
@@ -32,7 +32,7 @@
         }
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         p {
             font-size: 1.13rem;
             line-height: 1.6rem;

@@ -4,13 +4,13 @@
     align-items: center;
     gap: 1.8rem;
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3.13rem;

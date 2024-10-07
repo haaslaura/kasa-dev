@@ -9,6 +9,12 @@
 /*******************/
 /**** MAIN FONT ****/
 /*******************/
+/*
+Breakpoint
+Small ≥576px
+Medium ≥992px
+Large ≥ 1240px
+*/
 .homecard {
   height: 255px;
   max-height: 255px;
@@ -590,12 +596,5 @@ body #root {
   flex-direction: column;
   align-items: center;
 }
-
-/*
-Breakpoint
-Small ≥576px
-Medium ≥992px
-Large ≥ 1240px
-*/
 
 /*# sourceMappingURL=style.css.map */

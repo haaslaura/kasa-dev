@@ -9,11 +9,11 @@
         width: auto;
     }
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         height: 1.69rem;
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         height: 2.25rem;
     }
 }

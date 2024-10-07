@@ -1,6 +1,7 @@
 @import "base/color";
 @import "base/normalize";
 @import "base/typography";
+@import "base/mixin";
 
 @import "components/card";
 @import "components/hero";
@@ -28,10 +29,3 @@ body {
         align-items: center;
     }
 }
-
-/*
-Breakpoint
-Small ≥576px
-Medium ≥992px
-Large ≥ 1240px
-*/

@@ -48,7 +48,7 @@
         gap: 1.25rem;
     }
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         .housing__sheet {
 
             .housing__sheet-header {
@@ -67,7 +67,7 @@
         }
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         .housing__sheet {
             flex-direction: row;
             justify-content: space-between;

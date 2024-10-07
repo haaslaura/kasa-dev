@@ -31,7 +31,7 @@
         line-height: 1.25rem;
     }
 
-    @media screen and (min-width: 576px) {
+    @include medium {
         margin: 20% 10%;
 
         h1 {
@@ -52,7 +52,7 @@
 
     }
 
-    @media screen and (min-width: 992px) {
+    @include large {
         margin: 5% 15%;
 
         h1 {

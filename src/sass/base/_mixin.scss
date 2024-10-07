@@ -1,0 +1,18 @@
+/*
+Breakpoint
+Small ≥576px
+Medium ≥992px
+Large ≥ 1240px
+*/
+
+@mixin medium {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
