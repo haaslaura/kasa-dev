@@ -9,6 +9,9 @@
 /*******************/
 /**** MAIN FONT ****/
 /*******************/
+/***********************
+******** MIXIN *********
+************************/
 /*
 Breakpoint
 Small ≥576px
@@ -150,6 +153,7 @@ Large ≥ 1240px
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .collapse button img {
   width: 24px;
@@ -273,8 +277,83 @@ Large ≥ 1240px
   }
 }
 
-.gallery {
+.slider {
   margin-bottom: 20px;
+  height: 35vh;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.slider .slider__slides {
+  height: 100%;
+}
+.slider .slider__slides .slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.7s ease-in-out;
+  transform: translateX(100%);
+}
+.slider .slider__slides .slider__slide.active {
+  display: block;
+  transform: translateX(0);
+  z-index: 1;
+}
+.slider .slider__slides .slider__slide.next {
+  display: block;
+}
+.slider .slider__slides .slider__slide.prev {
+  display: block;
+  transform: translateX(-100%);
+}
+.slider .slider__slides .slider__slide img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+.slider .slider__arrow {
+  position: absolute;
+  height: 2rem;
+  width: auto;
+  top: calc(50% - (1rem + 3%));
+  padding: 3%;
+  z-index: 2;
+  transform: scale(1);
+  transition: 150ms ease-out;
+  cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  .slider .slider__arrow {
+    height: 4rem;
+    top: calc(50% - (2rem + 3%));
+  }
+}
+@media screen and (min-width: 992px) {
+  .slider .slider__arrow {
+    height: 5rem;
+    top: calc(50% - (2.5rem + 3%));
+  }
+}
+.slider .slider__arrow:hover, .slider .slider__arrow:active {
+  transform: scale(1.1);
+  transition: 150ms ease-out;
+}
+.slider .slider__arrow#prev-arrow {
+  left: 0;
+}
+.slider .slider__arrow#next-arrow {
+  right: 0;
+}
+@media screen and (min-width: 992px) {
+  .slider {
+    height: 50vh;
+  }
 }
 
 header {

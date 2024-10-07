@@ -1,3 +1,7 @@
+/***********************
+******** MIXIN *********
+************************/
+
 /*
 Breakpoint
 Small ≥576px
@@ -5,6 +9,7 @@ Medium ≥992px
 Large ≥ 1240px
 */
 
+// RESPONSIV
 @mixin medium {
     @media screen and (min-width: 576px) {
         @content;
@@ -14,5 +19,22 @@ Large ≥ 1240px
 @mixin large {
     @media screen and (min-width: 992px) {
         @content;
+    }
+}
+
+// ARROW SLIDER
+@mixin responsive-arrow($small, $medium, $large, $paddingArrow: 3%) {
+    height: $small;
+    width: auto;
+    top: calc(50% - (#{$small / 2} + #{$paddingArrow}));
+
+    @media screen and (min-width: 576px) {
+        height: $medium;
+        top: calc(50% - (#{$medium / 2} + #{$paddingArrow}));
+    }
+
+    @media screen and (min-width: 992px) {
+        height: $large;
+        top: calc(50% - (#{$large / 2} + #{$paddingArrow}));
     }
 }
