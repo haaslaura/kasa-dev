@@ -13,6 +13,14 @@ function Collapse({ title, content }) {
         setOpenCollapse(!openCollapse);
     };
 
+    // If "content" is an array, add a line feed between all elements
+    let typeOfContent = false;
+    let list = "";
+    if (typeof content === "object") {
+        typeOfContent = true;
+        list = content.toString().replaceAll(",", "\n")
+    }
+
     return (
         <div className="collapse">
             <button
@@ -35,11 +43,15 @@ function Collapse({ title, content }) {
                 }}
             >
                 <div className={`collapse__content ${openCollapse ? 'open-content' : ''}`}>
-                    <p>{content}</p>
+                    <p>{typeOfContent ? list : content}</p>
                 </div>
             </div>
         </div>
     );
+}
+
+Collapse.propTypes = {
+    title: PropTypes.string,
 }
 
 export default Collapse;

@@ -27,9 +27,6 @@
         overflow: hidden;
         transition: height 0.3s ease;
 
-
-        .open-parent {}
-
         .collapse__content {
             padding: 25px 15px;
             border-radius: 5px;
@@ -43,6 +40,7 @@
                 font-size: 0.75rem;
                 font-weight: $font-weight-normal;
                 line-height: 1.06rem;
+                white-space: break-spaces;
             }
         }
 

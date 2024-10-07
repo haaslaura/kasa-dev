@@ -1,11 +1,12 @@
 import housings from "../data/logements.json"
 import { useParams } from "react-router-dom";
 import Tag from "../components/Tag"
-import Gallery from "../components/Gallery";
+import Gallery from "../components/Slider";
 import Collapse from "../components/Collapse";
 import StarsRating from "../components/StarsRating";
 import Owner from "../components/Owner";
 import Error from "./Error404";
+import Slider from "../components/Slider";
 
 function Housing() {
 
@@ -22,9 +23,9 @@ function Housing() {
 
     return (
         <div className="housing">
-            <Gallery
+            <Slider
                 key={`gallery-${id}`}
-                content={housing.pictures} />
+                slider={housing.pictures} />
 
             <div className="housing__sheet">
                 <div className="housing__sheet-header">
