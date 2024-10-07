@@ -1,10 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function Owner({ host }) {
 
+    const result = host.name.replace(/ /i, "\n");
+
     return (
-        <div>
-            <p>{host.name}</p>
+        <div className="owner">
+            <p>{result}</p>
             <img src={host.picture} alt=""></img>
         </div>
     );

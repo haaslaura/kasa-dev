@@ -1,0 +1,105 @@
+.housing {
+
+    .housing__sheet {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 15px;
+        margin-bottom: 2rem;
+
+        .housing__sheet-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+
+            h1 {
+                color: $color-main;
+                font-size: 1.12rem;
+                font-weight: $font-weight-semibold;
+                line-height: 1.6rem;
+            }
+
+            h2 {
+                color: $color-font-dark;
+                font-size: 0.87rem;
+                font-weight: $font-weight-semibold;
+                line-height: 1.25rem;
+            }
+
+            .housing__sheet-taglist {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.9rem;
+            }
+        }
+
+        .housing__sheet-host {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .housing__accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25px;
+    }
+
+    @media screen and (min-width: 576px) {
+        .housing__sheet {
+
+            .housing__sheet-header {
+                gap: 0.3rem;
+
+                h1 {
+                    font-size: 1.5rem;
+                    line-height: 2.25rem;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .housing__sheet {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .housing__sheet-header {
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 2.25rem;
+                    line-height: 3.2rem;
+                }
+
+                h2 {
+                    font-size: 1.12rem;
+                    line-height: 1.6rem;
+                }
+
+                .housing__sheet-taglist {
+                    margin-top: 15px;
+                }
+            }
+
+            .housing__sheet-host {
+                flex-direction: column-reverse;
+                align-items: flex-end;
+            }
+        }
+
+        .housing__accordion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4.75rem;
+        }
+    }
+}

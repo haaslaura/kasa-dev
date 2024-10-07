@@ -1,0 +1,19 @@
+.starsrange {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 1.13rem;
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    @media screen and (min-width: 576px) {
+        height: 1.69rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        height: 2.25rem;
+    }
+}

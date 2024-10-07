@@ -38,12 +38,12 @@ function Housing() {
                         ))}
                     </div>
                 </div>
-                <div>
+                <div className="housing__sheet-host">
                     < StarsRating rating={numbStars} />
                     < Owner host={housing.host} />
                 </div>
             </div>
-            <div id="accordionProperties" className="housing__sheet-accordion">
+            <div id="accordionProperties" className="housing__accordion">
                 <Collapse
                     key={`description-${id}`}
                     title="Description"

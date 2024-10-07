@@ -1,7 +1,7 @@
 function Tag({ content }) {
 
     return (
-        <span>{content}</span>
+        <span className="tag">{content}</span>
     );
 }
 

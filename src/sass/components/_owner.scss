@@ -1,0 +1,46 @@
+.owner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    p {
+        color: $color-main;
+        font-size: 0.75rem;
+        font-weight: $font-weight-semibold;
+        line-height: 1.07rem;
+        text-align: end;
+        white-space: pre;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    @media screen and (min-width: 576px) {
+        p {
+            font-size: 1rem;
+            line-height: 1.4rem;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        p {
+            font-size: 1.13rem;
+            line-height: 1.6rem;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
+}

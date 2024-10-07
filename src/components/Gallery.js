@@ -4,7 +4,7 @@ function Gallery({ galleryArray }) {
 
 
     return (
-        <div>
+        <div className="gallery">
             Ici la gallery !
         </div>
     );

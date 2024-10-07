@@ -1,0 +1,16 @@
+.tag {
+    background-color: $color-main;
+    border-radius: 6px;
+    color: $color-font-light;
+    font-size: 0.63rem;
+    font-weight: $font-weight-bold;
+    padding: 5px 25px;
+
+    @media screen and (min-width: 576px) {
+        font-size: 0.75rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        font-size: 0.87rem;
+    }
+}

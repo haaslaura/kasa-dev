@@ -185,6 +185,91 @@
   }
 }
 
+.owner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.owner p {
+  color: #FF6060;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.07rem;
+  text-align: end;
+  white-space: pre;
+}
+.owner img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (min-width: 576px) {
+  .owner p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  .owner img {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .owner p {
+    font-size: 1.13rem;
+    line-height: 1.6rem;
+  }
+  .owner img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.starsrange {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 1.13rem;
+}
+.starsrange img {
+  height: 100%;
+  width: auto;
+}
+@media screen and (min-width: 576px) {
+  .starsrange {
+    height: 1.69rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .starsrange {
+    height: 2.25rem;
+  }
+}
+
+.tag {
+  background-color: #FF6060;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.63rem;
+  font-weight: 700;
+  padding: 5px 25px;
+}
+@media screen and (min-width: 576px) {
+  .tag {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .tag {
+    font-size: 0.87rem;
+  }
+}
+
+.gallery {
+  margin-bottom: 20px;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -195,7 +280,6 @@ header {
   padding-left: 1rem;
   padding-right: 1rem;
   height: 3rem;
-  width: 100%;
 }
 header img {
   height: 100%;
@@ -232,7 +316,6 @@ header .navbar .navbar__link:hover {
     max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
     height: 4.25rem;
   }
   header .navbar .navbar__link {
@@ -286,7 +369,6 @@ footer p {
     max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
   }
 }
 
@@ -347,6 +429,90 @@ footer p {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.housing .housing__sheet {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+.housing .housing__sheet .housing__sheet-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.housing .housing__sheet .housing__sheet-header h1 {
+  color: #FF6060;
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+.housing .housing__sheet .housing__sheet-header h2 {
+  color: #000;
+  font-size: 0.87rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.housing .housing__sheet .housing__sheet-header .housing__sheet-taglist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+.housing .housing__sheet .housing__sheet-host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.housing .housing__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25px;
+}
+@media screen and (min-width: 576px) {
+  .housing .housing__sheet .housing__sheet-header {
+    gap: 0.3rem;
+  }
+  .housing .housing__sheet .housing__sheet-header h1 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .housing .housing__sheet .housing__sheet-header h2 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .housing .housing__sheet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .housing .housing__sheet .housing__sheet-header {
+    justify-content: space-between;
+  }
+  .housing .housing__sheet .housing__sheet-header h1 {
+    font-size: 2.25rem;
+    line-height: 3.2rem;
+  }
+  .housing .housing__sheet .housing__sheet-header h2 {
+    font-size: 1.12rem;
+    line-height: 1.6rem;
+  }
+  .housing .housing__sheet .housing__sheet-header .housing__sheet-taglist {
+    margin-top: 15px;
+  }
+  .housing .housing__sheet .housing__sheet-host {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .housing .housing__accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.75rem;
   }
 }
 
