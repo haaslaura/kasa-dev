@@ -71,22 +71,23 @@ function Slideshow({ gallery }) {
             <p className={`${!isMediumScreen && "numbering"}`}>
                 {activeSlide + 1}/{totalSlides}
             </p>
-
-            <img
-                src={prevArrow}
-                id="prev-arrow"
-                onClick={() => slider("prev")}
-                className="slider__arrow" alt="Previous"
-            />
-
-            <img
-                src={nextArrow}
-                id="next-arrow"
-                onClick={() => slider("next")}
-                className="slider__arrow"
-                alt="Next"
-            />
-
+            <button>
+                <img
+                    src={prevArrow}
+                    id="prev-arrow"
+                    onClick={() => slider("prev")}
+                    className="slider__arrow" alt="Previous"
+                />
+            </button>
+            <button>
+                <img
+                    src={nextArrow}
+                    id="next-arrow"
+                    onClick={() => slider("next")}
+                    className="slider__arrow"
+                    alt="Next"
+                />
+            </button>
         </div >
     );
 }
