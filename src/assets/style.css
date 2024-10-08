@@ -323,12 +323,11 @@ Large ≥ 1240px
   height: 2rem;
   width: auto;
   top: calc(50% - (1rem));
+  padding: 3%;
   z-index: 2;
   transform: scale(1);
   transition: 150ms ease-out;
   cursor: pointer;
-  border: 0;
-  background: transparent;
 }
 @media screen and (min-width: 576px) {
   .slider .slider__arrow {
@@ -347,13 +346,10 @@ Large ≥ 1240px
   transition: 150ms ease-out;
 }
 .slider .slider__arrow#prev-arrow {
-  left: 2%;
+  left: 0;
 }
 .slider .slider__arrow#next-arrow {
-  right: 2%;
-}
-.slider .slider__arrow img {
-  object-fit: contain;
+  right: 0;
 }
 @media screen and (min-width: 576px) {
   .slider p.numbering {
