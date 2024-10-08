@@ -5,6 +5,14 @@
     overflow: hidden;
     position: relative;
 
+    img {
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+    }
+
     .slider__slides {
         height: 100%;
 
@@ -16,7 +24,7 @@
             height: 100%;
             z-index: -1;
             transition: all 0.7s ease-in-out;
-            transform: translateX(100%); // ??
+            transform: translateX(100%);
 
             &.active {
                 display: block;
@@ -24,24 +32,19 @@
                 z-index: 1;
             }
 
-            &.next {
+            &.next,
+            &.prev {
                 display: block;
             }
 
             &.prev {
-                display: block;
                 transform: translateX(-100%);
             }
-
-            img {
-                position: relative;
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                user-select: none;
-            }
         }
+    }
+
+    p {
+        display: none;
     }
 
     .slider__arrow {
@@ -68,7 +71,28 @@
         }
     }
 
+    @include medium {
+        p {
+            &.numbering {
+                display: block;
+                position: absolute;
+                bottom: 6%;
+                left: 49%;
+                z-index: 2;
+                font-size: 0.87rem;
+                font-weight: $font-weight-semibold;
+                color: $color-font-light;
+            }
+        }
+    }
+
     @include large {
         height: 50vh;
+
+        p {
+            &.numbering {
+                font-size: 1.12rem;
+            }
+        }
     }
 }

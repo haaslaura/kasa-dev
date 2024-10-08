@@ -16,16 +16,28 @@ function Housing() {
     if (!housing) {
         return <Error
             housingNotFound={housing} />
-    }
+    };
 
-    const numbStars = Number(housing.rating)
+    const numbStars = Number(housing.rating);
+    let totalSlides = housing.pictures.length;
 
     return (
         <div className="housing">
-            <Slideshow
-                key={`gallery-${id}`}
-                gallery={housing.pictures} />
-
+            {// Slideshow : if there is only one image in the array, display a still image
+            }
+            {(totalSlides < 2) ? (
+                <>
+                    <div className="slider">
+                        <div className="slider__slides">
+                            <img src={housing.pictures} alt="" />
+                        </div>
+                    </div>
+                </>
+            ) : (
+                <Slideshow
+                    key={`gallery-${id}`}
+                    gallery={housing.pictures} />
+            )}
             <div className="housing__sheet">
                 <div className="housing__sheet-header">
                     <h1>{housing.title}</h1>
