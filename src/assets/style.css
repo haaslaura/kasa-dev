@@ -32,8 +32,9 @@ Large ≥ 1240px
   display: block;
   height: 100%;
 }
-.homecard a:active {
-  color: #FF6060;
+.homecard a:focus > .homecard__title > h2 {
+  outline: 4px #FF6060 solid;
+  border-radius: 5px;
 }
 .homecard a:hover img {
   transform: scale(1.09);
@@ -50,7 +51,7 @@ Large ≥ 1240px
   justify-content: flex-end;
   z-index: 2;
 }
-.homecard a .homecard__title p {
+.homecard a .homecard__title h2 {
   margin: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -323,11 +324,12 @@ Large ≥ 1240px
   height: 2rem;
   width: auto;
   top: calc(50% - (1rem));
-  padding: 3%;
   z-index: 2;
   transform: scale(1);
   transition: 150ms ease-out;
   cursor: pointer;
+  border: 0;
+  background: transparent;
 }
 @media screen and (min-width: 576px) {
   .slider .slider__arrow {
@@ -346,10 +348,13 @@ Large ≥ 1240px
   transition: 150ms ease-out;
 }
 .slider .slider__arrow#prev-arrow {
-  left: 0;
+  left: 2%;
 }
 .slider .slider__arrow#next-arrow {
-  right: 0;
+  right: 2%;
+}
+.slider .slider__arrow img {
+  object-fit: contain;
 }
 @media screen and (min-width: 576px) {
   .slider p.numbering {
