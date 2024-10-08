@@ -23,18 +23,18 @@ Large ≥ 1240px
 }
 
 // ARROW SLIDER
-@mixin responsive-arrow($small, $medium, $large, $paddingArrow: 3%) {
+@mixin responsive-arrow($small, $medium, $large) {
     height: $small;
     width: auto;
-    top: calc(50% - (#{$small / 2} + #{$paddingArrow}));
+    top: calc(50% - (#{$small / 2}));
 
     @media screen and (min-width: 576px) {
         height: $medium;
-        top: calc(50% - (#{$medium / 2} + #{$paddingArrow}));
+        top: calc(50% - (#{$medium / 2}));
     }
 
     @media screen and (min-width: 992px) {
         height: $large;
-        top: calc(50% - (#{$large / 2} + #{$paddingArrow}));
+        top: calc(50% - (#{$large / 2}));
     }
 }

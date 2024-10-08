@@ -50,11 +50,12 @@
     .slider__arrow {
         position: absolute;
         @include responsive-arrow(2rem, 4rem, 5rem);
-        padding: 3%;
         z-index: 2;
         transform: scale(1);
         transition: 150ms ease-out;
         cursor: pointer;
+        border: 0;
+        background: transparent;
 
         &:hover,
         &:active {
@@ -63,11 +64,15 @@
         }
 
         &#prev-arrow {
-            left: 0;
+            left: 2%;
         }
 
         &#next-arrow {
-            right: 0;
+            right: 2%;
+        }
+
+        img {
+            object-fit: contain;
         }
     }
 
