@@ -322,23 +322,24 @@ Large ≥ 1240px
   position: absolute;
   height: 2rem;
   width: auto;
-  top: calc(50% - (1rem + 3%));
-  padding: 3%;
+  top: calc(50% - (1rem));
   z-index: 2;
   transform: scale(1);
   transition: 150ms ease-out;
   cursor: pointer;
+  border: 0;
+  background: transparent;
 }
 @media screen and (min-width: 576px) {
   .slider .slider__arrow {
     height: 4rem;
-    top: calc(50% - (2rem + 3%));
+    top: calc(50% - (2rem));
   }
 }
 @media screen and (min-width: 992px) {
   .slider .slider__arrow {
     height: 5rem;
-    top: calc(50% - (2.5rem + 3%));
+    top: calc(50% - (2.5rem));
   }
 }
 .slider .slider__arrow:hover, .slider .slider__arrow:active {
@@ -346,10 +347,13 @@ Large ≥ 1240px
   transition: 150ms ease-out;
 }
 .slider .slider__arrow#prev-arrow {
-  left: 0;
+  left: 2%;
 }
 .slider .slider__arrow#next-arrow {
-  right: 0;
+  right: 2%;
+}
+.slider .slider__arrow img {
+  object-fit: contain;
 }
 @media screen and (min-width: 576px) {
   .slider p.numbering {

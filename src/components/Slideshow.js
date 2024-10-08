@@ -47,7 +47,7 @@ function Slideshow({ gallery }) {
     }
 
     return (
-        <div className="slider">
+        <div className="slider" id="slidershow">
             <div className="slider__slides">
                 {gallery.map((picture, index) => (
                     <div key={`slide-${index}`} className={`slider__slide
@@ -71,22 +71,28 @@ function Slideshow({ gallery }) {
             <p className={`${!isMediumScreen && "numbering"}`}>
                 {activeSlide + 1}/{totalSlides}
             </p>
-
-            <img
-                src={prevArrow}
-                id="prev-arrow"
-                onClick={() => slider("prev")}
-                className="slider__arrow" alt="Previous"
-            />
-
-            <img
-                src={nextArrow}
-                id="next-arrow"
-                onClick={() => slider("next")}
+            <button
                 className="slider__arrow"
-                alt="Next"
-            />
-
+                id="prev-arrow"
+                aria-controls="slidershow"
+                aria-label="Précedent"
+                onClick={() => slider("prev")}>
+                <img
+                    src={prevArrow}
+                    alt="Previous"
+                />
+            </button>
+            <button
+                className="slider__arrow"
+                id="next-arrow"
+                aria-controls="slidershow"
+                aria-label="Suivant"
+                onClick={() => slider("next")}>
+                <img
+                    src={nextArrow}
+                    alt="Next"
+                />
+            </button>
         </div >
     );
 }
