@@ -20,7 +20,8 @@
 @import "pages/housing";
 @import "pages/error404";
 
-body {
+body,
+button {
     font-family: $font-main;
 
     #root {

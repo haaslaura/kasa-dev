@@ -1,23 +1,27 @@
 .collapse {
 
-    button {
-        border: none;
+    button,
+    .collapse__content {
         border-radius: 5px;
-        width: 100%;
-        background-color: $color-main;
-        color: $color-font-light;
-        padding: 10px;
-        text-align: start;
-        font-size: 0.9rem;
-        font-family: $font-main;
-        font-weight: $font-weight-bold;
-        line-height: 1.6rem;
-        cursor: pointer;
+    }
 
+    button {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        text-align: start;
+
+        border: none;
+        width: 100%;
+        background-color: $color-main;
+        padding: 10px;
+        cursor: pointer;
+
+        font-size: 0.9rem;
+        font-weight: $font-weight-bold;
+        line-height: 1.6rem;
+        color: $color-font-light;
 
         img {
             width: 24px;
@@ -30,9 +34,7 @@
 
         .collapse__content {
             padding: 25px 15px;
-            border-radius: 5px;
             background-color: #F6F6F673;
-
             transform: translateY(-110px);
             transition: transform 0.3s ease;
 

@@ -1,6 +1,10 @@
-header {
+header,
+.navbar {
     display: flex;
     flex-direction: row;
+}
+
+header {
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
@@ -14,9 +18,9 @@ header {
     }
 
     .navbar {
-        display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         text-align: end;
+        justify-content: flex-end;
         gap: 1.6rem;
 
         .navbar__link {

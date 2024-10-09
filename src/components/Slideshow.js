@@ -1,34 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import prevArrow from "../assets/prev-arrow.svg";
 import nextArrow from "../assets/next-arrow.svg";
 
 function Slideshow({ gallery }) {
 
-    const [isMediumScreen, setIsMediumScreen] = useState(window.innerWidth < 576);
     const [activeSlide, setActiveSlide] = useState(0);
     let totalSlides = gallery.length;
-
-    // taille de l'écran
-
-    // executer un effet après le rendu du composant, [] = une seule fois lors du montage
-    useEffect(() => {
-
-        const handleResize = () => {
-
-            // met à jour setIsMediumScreen 
-            // pour indiquer si la largeur de la fenêtre est inférieure à 576px
-            setIsMediumScreen(window.innerWidth < 576);
-        };
-
-        // fonction appelé chaque fois que la fenêtre est redimensionnée
-        window.addEventListener('resize', handleResize);
-
-        // fonction de nettoyage
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
 
     function slider(action) {
         if (action === "next") {
@@ -68,7 +45,7 @@ function Slideshow({ gallery }) {
                     </div>
                 ))}
             </div>
-            <p className={`${!isMediumScreen && "numbering"}`}>
+            <p className="numbering">
                 {activeSlide + 1}/{totalSlides}
             </p>
             <button
