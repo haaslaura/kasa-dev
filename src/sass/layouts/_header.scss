@@ -26,11 +26,18 @@ header {
         .navbar__link {
             font-size: 0.75rem;
             font-weight: $font-weight-semibold;
-            text-transform: uppercase;
             color: $color-font-dark;
-            text-decoration: none;
+            text-transform: uppercase;
 
-            &:hover {
+            &.pending {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.active {
                 text-decoration: underline;
             }
         }

@@ -415,11 +415,16 @@ header .navbar {
 header .navbar .navbar__link {
   font-size: 0.75rem;
   font-weight: 500;
-  text-transform: uppercase;
   color: #000;
+  text-transform: uppercase;
+}
+header .navbar .navbar__link.pending {
   text-decoration: none;
 }
-header .navbar .navbar__link:hover {
+header .navbar .navbar__link.pending:hover {
+  text-decoration: underline;
+}
+header .navbar .navbar__link.active {
   text-decoration: underline;
 }
 @media screen and (min-width: 576px) {
